@@ -5,8 +5,10 @@ import { SpotController } from "./spot.controller";
 import { SpotService } from "./spot.service";
 
 @Module({
-    imports: {TypeOrmModule.forFeature([Spot])},
+    imports: [TypeOrmModule.forFeature([Spot])],
     controllers: [SpotController],
-    providers: [SpotService]
+    providers: [SpotService],
+    exports: [SpotService]
+    
 })
 export class SpotModule{}
