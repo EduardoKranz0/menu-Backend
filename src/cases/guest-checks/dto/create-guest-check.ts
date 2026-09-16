@@ -1,6 +1,6 @@
-import { IsNotEmpty, IsString, MaxLength } from "class-validator";
+import { IsNotEmpty, IsString, IsUUID, MaxLength } from "class-validator";
 
-export class CreateGuestCheckSpot {
+export class CreateGuestCheckDto {
     @IsUUID()
     spotId: string;
 }
